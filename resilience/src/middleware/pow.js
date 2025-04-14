@@ -1,3 +1,5 @@
+import generateNonce from "./nonce";
+
 export async function runResilience({
   url,
   count = 10,
@@ -54,5 +56,6 @@ export async function runResilience({
     }
   }
 
+  console.log("NONCE : " + JSON.stringify(generateNonce("challenge")));
   return results;
 }
