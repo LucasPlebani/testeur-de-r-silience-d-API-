@@ -25,7 +25,6 @@ export async function runResilience({
     try {
       const response = await fetch(request.url, {
         ...request.options,
-        mode: "no-cors",
       });
       statusCode = response.status;
 
