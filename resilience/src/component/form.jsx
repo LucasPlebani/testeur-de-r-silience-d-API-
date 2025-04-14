@@ -1,6 +1,8 @@
 import React from "react";
 import "./style/form.css";
 import Button from "./button.jsx";
+import activeMiddleware from "./activeMiddleware.jsx";
+
 function Form() {
     const [apiUrl, setApiUrl] = React.useState("");
     const [requestCount, setRequestCount] = React.useState(1);
@@ -32,6 +34,7 @@ function Form() {
                     min="1"
                 />
                 <Button />
+                <activeMiddleware />
             </div>
         </div>
     );
