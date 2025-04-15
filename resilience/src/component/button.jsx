@@ -9,7 +9,7 @@ function Button({ apiUrl, requestCount }) {
       url: apiUrl,
       count: parseInt(requestCount),
     });
-    console.log("NONCE : " + JSON.stringify(generateNonce("challenge")));
+    console.log("NONCE : " + JSON.stringify(generateNonce("test")));
     console.log("Résultats du test : ", results);
   };
 

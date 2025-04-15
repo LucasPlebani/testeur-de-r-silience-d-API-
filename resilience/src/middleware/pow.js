@@ -7,7 +7,26 @@ export async function runResilience({
 }) {
   const results = [];
 
-  // URL = http://217.154.21.85:8447/hello
+  // URL resilience = http://217.154.21.85:8447/hello
+  // URL POST = http://217.154.21.85:8447/api/challenge
+
+  /*
+  TODO : faire une route POST pour appeler sur postman et afficher pour le nonce,
+  une route UPDATE, une route pour DELETE
+
+  
+  exemple de req.body :
+  {
+  "challenge": "test",
+  "nonce": 337
+  }
+
+  exemple JSON de réponse : 
+  {
+    "error": "hash invalide",
+    "suggestion" : "Ce n'était pas \"337\" mais \"338\" ! "
+  }
+  */
 
   const wait = (ms) => new Promise((res) => setTimeout(res, ms));
 
