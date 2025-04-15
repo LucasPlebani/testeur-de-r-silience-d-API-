@@ -1,6 +1,6 @@
 const { sha256 } = require("js-sha256");
 
-export default function generateNonce(infos: string, difficulty = 3) {
+export function generateNonce(infos: string, difficulty = 3) {
   let nonce = 0;
   const targetPrefix = "0".repeat(difficulty);
 

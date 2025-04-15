@@ -7,3 +7,5 @@ Ensuite, clique droit sur chrome.exe, puis copier le chemin d'accès, et ensuite
 "C:\Program Files\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:/temp-chrome"
 
 NE PAS FERMER L'INVIT DE COMMANDE NI LA PAGE CHROME
+
+Lancer le serveur : npm start

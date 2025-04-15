@@ -1,5 +1,6 @@
 import React from "react";
 import { runResilience } from "../middleware/pow";
+import { generateNonce } from "../middleware/nonce";
 
 function Button({ apiUrl, requestCount }) {
   const handleClick = async () => {
@@ -8,7 +9,7 @@ function Button({ apiUrl, requestCount }) {
       url: apiUrl,
       count: parseInt(requestCount),
     });
-
+    console.log("NONCE : " + JSON.stringify(generateNonce("challenge")));
     console.log("Résultats du test : ", results);
   };
 
