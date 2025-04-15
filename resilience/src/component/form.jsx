@@ -32,8 +32,10 @@ function Form() {
           onChange={handleRequestCountChange}
           min="1"
         />
+        {showActiveMiddleware()}
         <Button apiUrl={apiUrl} requestCount={requestCount} />
       </div>
+      
     </div>
   );
 }
