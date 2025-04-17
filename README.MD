@@ -9,3 +9,7 @@ Ensuite, clique droit sur chrome.exe, puis copier le chemin d'accès, et ensuite
 NE PAS FERMER L'INVIT DE COMMANDE NI LA PAGE CHROME
 
 Lancer le serveur : npm start
+
+nonceBodyComponent : ajout du retour de la console dans le body. 
+
+slider pour les requetes Post / put / delete / get 

@@ -1,6 +1,7 @@
 import React from "react";
 import "./style/form.css";
 import Button from "./button.jsx";
+import DropdownRequest from "./dropdownRequest.jsx";
 
 function Form() {
   const [apiUrl, setApiUrl] = React.useState("");
@@ -68,6 +69,8 @@ function Form() {
         postUrl={postUrl}
         nonceToTest={nonceToTest}
       />
+      <DropdownRequest />
+      
     </div>
   );
 }
