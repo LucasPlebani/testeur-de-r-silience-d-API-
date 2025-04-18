@@ -50,7 +50,7 @@ function Form() {
           id="postUrl"
           value={postUrl}
           onChange={handlePostUrlChange}
-          placeholder="http://localhost:8447/api/challenge"
+          placeholder="Entrez l'URL de l'API"
         />
       </div>
 
