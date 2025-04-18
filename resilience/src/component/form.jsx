@@ -16,8 +16,8 @@ function Form() {
 
   return (
     <div className="form">
-      <h1>Form</h1>
-      <p>Ce formulaire permet de configurer l'API cible</p>
+      <h1>Testeur de résilience de données</h1>
+      <p>Ce formulaire permet de tester les différentes API disponibles</p>
 
       <div>
         <label htmlFor="apiUrl">URL de l'API pour les requêtes : </label>
@@ -70,7 +70,6 @@ function Form() {
         nonceToTest={nonceToTest}
       />
       <DropdownRequest />
-      
     </div>
   );
 }

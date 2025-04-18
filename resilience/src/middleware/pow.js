@@ -47,13 +47,13 @@ export async function runResilience({
       });
       statusCode = response.status;
 
-      if (response.status >= 100) {
+      if (response.status >= 100 && response.status < 200) {
         status = "Informative_response";
-      } else if (response.status >= 200) {
+      } else if (response.status >= 200 && response.status < 300) {
         status = "success";
-      } else if (response.status >= 300) {
+      } else if (response.status >= 300 && response.status < 400) {
         status = "redirection_message";
-      } else if (response.status >= 400) {
+      } else if (response.status >= 400 && response.status < 500) {
         status = "client_error";
       } else if (response.status >= 500 && response.status < 600) {
         status = "server_error";
