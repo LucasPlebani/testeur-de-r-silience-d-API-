@@ -1,49 +1,49 @@
 /* Styles for dropdownRequest component */
 
 .dropdown-container {
-    position: relative;
-    display: inline-block;
-    width: 200px;
+  position: relative;
+  display: inline-block;
+  width: 200px;
 }
 
 .dropdown-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #95067b;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: left;
+  width: 100%;
+  padding: 10px;
+  background-color: #95067b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
 }
 
 .dropdown-button:hover {
-    background-color: #95067b;
+  background-color: #95067b;
 }
 
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
 }
 
 .dropdown-container.open .dropdown-menu {
-    display: block;
+  display: block;
 }
 
 .dropdown-item {
-    padding: 10px;
-    cursor: pointer;
-    color: white;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
 }
 
 .dropdown-item:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
