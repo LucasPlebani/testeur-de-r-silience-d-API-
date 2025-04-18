@@ -41,12 +41,12 @@
 }
 
 .form input:focus {
-  border-color: #1e9506;
+  border-color: #95067b;
   outline: none;
 }
 
 .button {
-  background-color: #1e9506;
+  background-color: #95067b;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -58,9 +58,9 @@
 }
 
 .button:hover {
-  background-color: #08c693;
+  background-color: #66586b;
 }
 
 body {
-  background-color: #08c693b6;
+  background-color: #b5a5bb;
 }
