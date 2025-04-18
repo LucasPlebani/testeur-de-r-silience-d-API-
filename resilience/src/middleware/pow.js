@@ -7,7 +7,26 @@ export async function runResilience({
 }) {
   const results = [];
 
-  // URL = http://217.154.21.85:8447/hello
+  // URL resilience = http://217.154.21.85:8447/hello
+  // URL POST = http://217.154.21.85:8447/api/challenge
+
+  /*
+  TODO : faire une route POST pour appeler sur postman et afficher pour le nonce,
+  une route UPDATE, une route pour DELETE
+
+  
+  exemple de req.body :
+  {
+  "challenge": "test",
+  "nonce": 337
+  }
+
+  exemple JSON de réponse : 
+  {
+    "error": "hash invalide",
+    "suggestion" : "Ce n'était pas \"337\" mais \"338\" ! "
+  }
+  */
 
   const wait = (ms) => new Promise((res) => setTimeout(res, ms));
 
@@ -19,20 +38,25 @@ export async function runResilience({
     }
 
     const start = performance.now();
-    let status = "success";
+    let status = "";
     let statusCode = 0;
 
     try {
       const response = await fetch(request.url, {
         ...request.options,
-        mode: "no-cors",
       });
       statusCode = response.status;
 
-      if (response.status >= 500) {
-        status = "server_error";
-      } else if (response.status >= 400) {
+      if (response.status >= 100 && response.status < 200) {
+        status = "Informative_response";
+      } else if (response.status >= 200 && response.status < 300) {
+        status = "success";
+      } else if (response.status >= 300 && response.status < 400) {
+        status = "redirection_message";
+      } else if (response.status >= 400 && response.status < 500) {
         status = "client_error";
+      } else if (response.status >= 500 && response.status < 600) {
+        status = "server_error";
       }
     } catch (err) {
       status = "network_error";
