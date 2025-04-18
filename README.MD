@@ -12,4 +12,7 @@ Lancer le serveur : npm start
 
 nonceBodyComponent : ajout du retour de la console dans le body. 
 
-slider pour les requetes Post / put / delete / get 
+x slider pour les requetes Post / put / delete / get 
+
+
+

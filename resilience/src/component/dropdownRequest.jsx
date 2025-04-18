@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import "./style/dropdown.css";
 
 const RequestComponent = () => {
   const [method, setMethod] = useState("GET");
-  const [url, setUrl] = useState("http://localhost:8447/hello");
+  const [url, setUrl] = useState("");
   const [jsonBody, setJsonBody] = useState("{}");
   const [requestCount, setRequestCount] = useState(1); // ➕ nouveau state
   const [response, setResponse] = useState(null);
@@ -49,16 +50,28 @@ const RequestComponent = () => {
   };
 
   return (
-    <div style={{ padding: "1rem" }}>
-      <h2>Tester une requête HTTP</h2>
+    <div className="dropdown-container">
+      <h2>Test de requête </h2>
       <form onSubmit={handleRequest}>
         <label>
           Type de requête :
-          <select value={method} onChange={(e) => setMethod(e.target.value)}>
-            <option value="GET">GET</option>
-            <option value="POST">POST</option>
-            <option value="PUT">PUT</option>
-            <option value="DELETE">DELETE</option>
+          <select
+            className="dropdown-button"
+            value={method}
+            onChange={(e) => setMethod(e.target.value)}
+          >
+            <option className="dropdown-item" value="GET">
+              GET
+            </option>
+            <option className="dropdown-item" value="POST">
+              POST
+            </option>
+            <option className="dropdown-item" value="PUT">
+              PUT
+            </option>
+            <option className="dropdown-item" value="DELETE">
+              DELETE
+            </option>
           </select>
         </label>
         <br />
@@ -69,7 +82,7 @@ const RequestComponent = () => {
             type="text"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
-            style={{ width: "100%" }}
+            placeholder="Entrez l'URL de l'API"
           />
         </label>
         <br />
@@ -93,7 +106,6 @@ const RequestComponent = () => {
             JSON Body :
             <textarea
               rows={8}
-              style={{ width: "100%" }}
               value={jsonBody}
               onChange={(e) => setJsonBody(e.target.value)}
             />

@@ -2,6 +2,7 @@ import React from "react";
 import "./style/form.css";
 import Button from "./button.jsx";
 import DropdownRequest from "./dropdownRequest.jsx";
+import BodyJson from "./logger.jsx";
 
 function Form() {
   const [apiUrl, setApiUrl] = React.useState("");
@@ -49,7 +50,7 @@ function Form() {
           id="postUrl"
           value={postUrl}
           onChange={handlePostUrlChange}
-          placeholder="http://localhost:8447/api/challenge"
+          placeholder="Entrez l'URL de l'API"
         />
       </div>
 
@@ -70,6 +71,7 @@ function Form() {
         nonceToTest={nonceToTest}
       />
       <DropdownRequest />
+      <BodyJson />
     </div>
   );
 }
