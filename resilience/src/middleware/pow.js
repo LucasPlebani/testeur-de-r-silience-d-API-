@@ -38,8 +38,8 @@ export async function runResilience({
     }
 
     const start = performance.now();
-    let status = "success";
-    let statusCode = 200;
+    let status = "";
+    let statusCode = 0;
 
     try {
       const response = await fetch(request.url, {
@@ -47,10 +47,16 @@ export async function runResilience({
       });
       statusCode = response.status;
 
-      if (response.status >= 500) {
-        status = "server_error";
+      if (response.status >= 100) {
+        status = "Informative_response";
+      } else if (response.status >= 200) {
+        status = "success";
+      } else if (response.status >= 300) {
+        status = "redirection_message";
       } else if (response.status >= 400) {
         status = "client_error";
+      } else if (response.status >= 500 && response.status < 600) {
+        status = "server_error";
       }
     } catch (err) {
       status = "network_error";
