@@ -31,16 +31,7 @@ export default function BodyJson() {
   }, []);
 
   return (
-    <div className="json-body">
-      <h1>Corps de la requête JSON</h1>
-      <label>
-        JSON Body :
-        <textarea
-          rows={8}
-          value={jsonBody}
-          onChange={(e) => setJsonBody(e.target.value)}
-        />
-      </label>
+    
 
       <div className="logs-section" style={{ marginTop: "1rem" }}>
         <h2>Logs Console</h2>
@@ -52,6 +43,5 @@ export default function BodyJson() {
           ))}
         </ul>
       </div>
-    </div>
   );
 }
