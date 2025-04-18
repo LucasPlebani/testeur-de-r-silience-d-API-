@@ -75,7 +75,9 @@ const RequestComponent = () => {
           </label>
         )}
         <br />
-        <button type="submit">Envoyer</button>
+        <button className="button" type="submit">
+          Envoyer
+        </button>
       </form>
 
       <h3>Réponse :</h3>
